@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+body {
+    background-color: #E0FFFF;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.5;
+    padding: 10px;
+}
+h3 {
+    color: red;
+    float: right;
+}
+
+header {
+    margin: 0 auto 50px auto;
+    width: 100%;
+    padding: 30px;
+    background: white;
+    border: 3px solid #30ddd4;
+}   
+.container {
+    border: 3px solid #30ddd4;
+    background-color: white;
+    padding: 20px;
+}
