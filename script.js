@@ -4,6 +4,10 @@ var startBtn = document.getElementById("startBtn");
 
 var secondsLeft = 75;
 
+function startGame() {
+    setTimer();
+    test();
+}
 
 function setTimer() {
     // Sets interval in variable
@@ -18,7 +22,14 @@ function setTimer() {
     }, 1000); 
   }
 
-  startBtn.addEventListener("click", setTimer);
+  function displayQuestions() {
+      alert("this is a test");
+  }
+
+  /*function hideContent() {
+  }*/
+
+  startBtn.addEventListener("click", startGame);
 
 
   //when "begin quiz" is clicked time interval is set and first question is displayed 
