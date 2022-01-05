@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Coding Quiz</title>
 </head>
 <body>
     <header>
-        <h2>View Highscores</h2>
+        <h2 id="highscores" class="highscores">View Highscores</h2>
         <h2>time:</h2>  
     </header>
 
@@ -19,11 +20,38 @@
             <button>Begin Quiz</button>
         </section>
         <div class="questions">
-            <h2>Inside which HTML element do we put the Javascript?</h2>
+            <h2>Inside which HTML tag do we put the Javascript?</h2>
+            <ol>
+                <li>&ltscripting&gt</li>
+                <li>&ltscript&gt</script></li>
+                <li>&ltjs&gt</li>
+                <li>&ltjavascript&gt</li>
+            </ol>
             <h2>Where is the correct place to insert a Javascript?</h2>
+            <ol>
+                <li>Both the &lthead&gt and the &ltbody&gt section are correct</li>
+                <li>the &lthead&gt section</li>
+                <li>the &ltbody&gt section</li>
+            </ol>
             <h2>How do you create a function in Javascript?</h2>
+            <ol>
+                <li>funtion myFunction()</li>
+                <li>function = myFunction()</li>
+                <li>function:myFunction()</li>
+            </ol>
             <h2>How does a FOR loop start?</h2>
+            <ol>
+                <li>for i = 1 to 5</li>
+                <li>for (i = 0; 1&lt=5)</li>
+                <li>for (i &lt= 5; i++)</li>
+                <li>for (i = 0; i &lt= 5; i++)</li>
+            </ol>
             <h2>HOw an you add a comment in Javascript?</h2>
+            <ol>
+                <li>&lt!--This is a comment--&gt</li>
+                <li>//This is a comment</li>
+                <li>'This is a comment</li>
+            </ol>
         </div>
         <section>
             <h2>All Done!</h2>
@@ -40,9 +68,10 @@
             <button>Clear Scores</button> 
         </div>
     </section>
+    <footer></footer>
     
    
 
-
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
