@@ -2,7 +2,7 @@
 var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("startBtn");
 
-var secondsLeft = 60;
+var secondsLeft = 75;
 
 
 function setTimer() {
@@ -11,7 +11,7 @@ function setTimer() {
       secondsLeft--; //if statement to make the var - 10 when answer is wrong
       countdown.textContent = secondsLeft + " seconds remaining";
   
-      if(secondsLeft === 0) {
+      if(secondsLeft <= 0) {
         clearInterval(timerInterval);
       }
   
@@ -33,4 +33,5 @@ function setTimer() {
 //If time runs out BEFORE user answers all questions, the display jumps to final score page and says "YOU LOST!"
 
 //Highscores are kept in local storage and user is able to click "view highscores" to go to that page
+//endGame() called w
 

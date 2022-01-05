@@ -14,7 +14,7 @@
     </header>
 
     <section class="container">
-        <section>
+        <section class="page-one" id="page-one">
             <h1>Coding Quiz Challenge</h1>
             <p>Once you press begin your time will start. Do your best to answer all of the questions in the time alotted. Keep in mind that 10 seconds will be deducted from your score every time a question is answered incorrectly.</p>
             <button id="startBtn">Begin Quiz</button>
@@ -22,48 +22,48 @@
         <section class="questions">
             <div>
                 <h2>Inside which HTML tag do we put the Javascript?</h2>
-                <ol>
+                <ul>
                     <li>&ltscripting&gt</li>
                     <li>&ltscript&gt</script></li>
                     <li>&ltjs&gt</li>
                     <li>&ltjavascript&gt</li>
-                </ol>
+                </ul>
             </div>
             <div>
                 <h2>Where is the correct place to insert a Javascript?</h2>
-                <ol>
+                <ul>
                     <li>Both the &lthead&gt and the &ltbody&gt section are correct</li>
                     <li>the &lthead&gt section</li>
                     <li>the &ltbody&gt section</li>
-                </ol>
+                </ul>
             </div>
             <div>
                 <h2>How do you create a function in Javascript?</h2>
-                <ol>
+                <ul>
                     <li>funtion myFunction()</li>
                     <li>function = myFunction()</li>
                     <li>function:myFunction()</li>
-                </ol>
+                </ul>
             </div>
             <div>
                 <h2>How does a FOR loop start?</h2>
-                <ol>
+                <ul>
                     <li>for i = 1 to 5</li>
                     <li>for (i = 0; 1&lt=5)</li>
                     <li>for (i &lt= 5; i++)</li>
                     <li>for (i = 0; i &lt= 5; i++)</li>
-                </ol>
+                </ul>
             </div>
             <div>
                 <h2>How an you add a comment in Javascript?</h2>
-                <ol>
+                <ul>
                     <li>&lt!--This is a comment--&gt</li>
                     <li>//This is a comment</li>
                     <li>'This is a comment</li>
-                </ol>
+                </ul>
             </div>
         </section>
-        <section>
+        <section id="end-game" class="end-game">
             <h2>All Done!</h2>
             <p>Your final score is: </p>
             <form>
@@ -72,7 +72,7 @@
                 <input type="submit" id="submitBtn" class="submitBtn">
             </form>
         </section>
-        <section class="scores">
+        <section id="scores" class="scores">
             <h2>Highscores</h2>
             <button>Go Back</button>
             <button>Clear Scores</button> 

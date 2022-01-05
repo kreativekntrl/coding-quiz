@@ -26,6 +26,22 @@ header {
     background-color: white;
     padding: 20px;
 }
+
+ul {
+    list-style: none;
+}
+
+.questions {
+    display: none;
+}
+
+.scores {
+    display: none;
+}
+.end-game {
+    display: none;
+}
+
 button {
     padding: 5px;
     background-color: #30ddd4;
