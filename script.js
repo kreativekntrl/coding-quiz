@@ -12,6 +12,7 @@ var pageOne = document.getElementById("page-one");
 var ansStatus = document.getElementById("right-wrong");
 var allDone = document.getElementById("end-game");
 var i = 0;
+var timerInterval;
 
 var questions = [questionOne, questionTwo, questionThree, questionFour, questionFive];
 
@@ -24,11 +25,10 @@ function startGame() {
 
 function setTimer() {
   // Sets interval in variable
-  var timerInterval = setInterval(function() {
+    timerInterval = setInterval(function() {
     secondsLeft--; 
     countdown.textContent = secondsLeft + " seconds remaining";
     if(secondsLeft <= 0) {
-      clearInterval(timerInterval);
       endGame();
     }
   }, 1000); 
@@ -85,6 +85,7 @@ function hideElement(num) {
 }
 
 function endGame() {
+  clearInterval(timerInterval);
   allDone.style.display = "block";
   questionsSec.style.display = "none";
   ansStatus.style.display = "none";

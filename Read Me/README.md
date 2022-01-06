@@ -3,7 +3,7 @@
 ## Description
 In this assignment I have created a timed quiz on JavaScript fundamentals for me and fellow boot camp students to gauge our progress compared to my peers.
 
-## [Try it yourself!](https://kreativekntrl.github.io/coding-quiz/)
+## [Try it yourself!](https://kreativekntrl.github.io/coding-quiz/) 
 
 The following images show a glimpse of the application:
 
@@ -18,7 +18,7 @@ This is a simple application that runs right in the browser, no installation or 
 HTML 
 JavaScript
 CSS
-
+ 
 
 ## Author:
 
