@@ -6,9 +6,11 @@ var questionFour = document.getElementById("question-four");
 var questionFive = document.getElementById("question-five");
 var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("startBtn");
-var questionsSec = document.getElementById("questions");
+var container = document.querySelector(".container");
+var questionsSec = document.querySelector(".questions");
 var pageOne = document.getElementById("page-one");
 var ansStatus = document.getElementById("right-wrong");
+var allDone = document.getElementById("end-game");
 var i = 0;
 
 var questions = [questionOne, questionTwo, questionThree, questionFour, questionFive];
@@ -25,11 +27,10 @@ function setTimer() {
   var timerInterval = setInterval(function() {
     secondsLeft--; 
     countdown.textContent = secondsLeft + " seconds remaining";
-    
     if(secondsLeft <= 0) {
       clearInterval(timerInterval);
+      endGame();
     }
-    
   }, 1000); 
 }
 
@@ -60,9 +61,7 @@ for ( var btnIdx = 0; btnIdx < ansBtn.length; btnIdx++) {
    });
 }
 
-//WILL run when user has selected their answer button
-  //displays next question Div and hides previous
-  
+//Displays the next question && runs endGame() when last question is answered
 function displayNextQuestion() {
   var index = questions;
   if (i === 0) {
@@ -73,6 +72,9 @@ function displayNextQuestion() {
         showElement(index[i]);
   }
   i++;
+  if (i === 6) {
+    endGame();
+  }
 }
 
 function showElement(num) {
@@ -82,22 +84,13 @@ function hideElement(num) {
   num.style.display = "none";
 }
 
-  startBtn.addEventListener("click", startGame);
+function endGame() {
+  allDone.style.display = "block";
+  questionsSec.style.display = "none";
+  ansStatus.style.display = "none";
+}
+
+startBtn.addEventListener("click", startGame);
   
 
-
-
-  //when "begin quiz" is clicked time interval is set and first question is displayed 
-        //setTime() function that sets the time to 60 seconds
-        //time interval counts down by 1 second and deducts 10 seconds every time a user gets a question incorrect
-
-//User is prompted with first question
-    //When user selects answer choice "wrong answer!" or "correct answer!" is displayed beneath the prompt
-    //User is then prompted with following question and so on until last question 
-    //after user has answered the last prompt, the page displays their final score and asks for initials
-
-//If time runs out BEFORE user answers all questions, the display jumps to final score page and says "YOU LOST!"
-
-//Highscores are kept in local storage and user is able to click "view highscores" to go to that page
-//endGame() called w
 
