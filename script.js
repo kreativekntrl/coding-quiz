@@ -1,35 +1,62 @@
 //When page loads the "coding quiz challenges" section is visible (all other prompts are hidden)
+var questionOne = document.getElementById("question-one");
 var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("startBtn");
+var questionsSec = document.getElementById("questions");
+var pageOne = document.getElementById("page-one");
+/*var ansBtn = document.querySelectorAll(".ans-btn");*/
+
 
 var secondsLeft = 75;
-
 function startGame() {
-    setTimer();
-    test();
+  setTimer();
+  handleStartClick();
+  /*displayQuestion();*/
 }
 
 function setTimer() {
-    // Sets interval in variable
-    var timerInterval = setInterval(function() {
-      secondsLeft--; //if statement to make the var - 10 when answer is wrong
-      countdown.textContent = secondsLeft + " seconds remaining";
-  
-      if(secondsLeft <= 0) {
-        clearInterval(timerInterval);
-      }
-  
-    }, 1000); 
-  }
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--; //if statement to make the var - 10 when answer is wrong
+    countdown.textContent = secondsLeft + " seconds remaining";
+    
+    if(secondsLeft <= 0) {
+      clearInterval(timerInterval);
+    }
+    
+  }, 1000); 
+}
 
-  function displayQuestions() {
-      alert("this is a test");
+//handleAnswerClick() handles the task of clicking through answers and will run the displayQuestion() function once a user makes their choice
+//IF user clicks on answer button
+//THEN functions runs displayQuestion()
+function handleStartClick(event) {
+  if (questionOne.style.display === "none") {
+    questionOne.style.display = "block";
+    pageOne.style.display = "none";
+  }
+}
+
+var counter = 1;
+var ansBtn = document.querySelectorAll(".ans-btn");
+for ( var counter = 0; counter < ansBtn.length; counter++) {
+    ansBtn[counter].addEventListener("click", function(){
+      alert("thats a answer");
+   });
+}
+
+
+function displayQuestion() {
+  
+
   }
 
   /*function hideContent() {
   }*/
 
   startBtn.addEventListener("click", startGame);
+  
+
 
 
   //when "begin quiz" is clicked time interval is set and first question is displayed 
