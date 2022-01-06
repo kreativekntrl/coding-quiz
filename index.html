@@ -14,7 +14,7 @@
     </header>
 
     <section class="container">
-        <section class="page-one" id="page-one">
+        <section class="page-one" id="page-one" style="display: block;">
             <h1>Coding Quiz Challenge</h1>
             <p>Once you press begin your time will start. Do your best to answer all of the questions in the time alotted. Keep in mind that 10 seconds will be deducted from your score every time a question is answered incorrectly.</p>
             <button id="startBtn">Begin Quiz</button>
@@ -34,15 +34,15 @@
                 <ul>
                     <li><button class="ans-btn">the &lthead&gt section</button></li>
                     <li><button class="ans-btn">the &ltbody&gt section</button></li>
-                    <li><button class="ans-btn">all of the above</button></li>
+                    <li><button id="right-ans" class="ans-btn">all of the above</button></li>
                 </ul>
             </div>
             <div id="question-three" class="qThree" style="display: none;">
                 <h2>How do you create a function in Javascript?</h2>
                 <ul>
-                    <li><button class="ans-btn">funtion myFunction()</button></li>
+                    <li><button id="right-ans" class="ans-btn">funtion myFunction()</button></li>
                     <li><button class="ans-btn">function = myFunction()</button></li>
-                    <li><buton class="ans-btn">function:myFunction()</button></li>
+                    <li><button class="ans-btn">function:myFunction()</button></li>
                     </ul>
             </div>
             <div id="question-four" class="qFour" style="display: none;">
@@ -51,14 +51,14 @@
                     <li><button class="ans-btn"> for i = 1 to 5</button></li>
                     <li><button class="ans-btn">for (i = 0; 1&lt=5)</button></li>
                     <li><button class="ans-btn">for (i &lt= 5; i++)</button></li>
-                    <li><button class="ans-btn">for (i = 0; i &lt= 5; i++)</button></li>
+                    <li><button id="right-ans" class="ans-btn">for (i = 0; i &lt= 5; i++)</button></li>
                 </ul>
             </div>
             <div id="question-five" class="qFive" style="display: none;">
                 <h2>How an you add a comment in Javascript?</h2>
                 <ul>
                     <li><button class="ans-btn">&lt!--This is a comment--&gt</button></li>
-                    <li><button class="ans-btn">//This is a comment</button></li>
+                    <li><button id="right-ans" class="ans-btn">//This is a comment</button></li>
                     <li><button class="ans-btn">'This is a comment</button></li>
                 </ul>
             </div>

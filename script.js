@@ -1,24 +1,29 @@
 //When page loads the "coding quiz challenges" section is visible (all other prompts are hidden)
 var questionOne = document.getElementById("question-one");
+var questionTwo = document.getElementById("question-two");
+var questionThree = document.getElementById("question-three");
+var questionFour = document.getElementById("question-four");
+var questionFive = document.getElementById("question-five");
 var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("startBtn");
 var questionsSec = document.getElementById("questions");
 var pageOne = document.getElementById("page-one");
 var ansStatus = document.getElementById("right-wrong");
-/*var ansBtn = document.querySelectorAll(".ans-btn");*/
+var i = 0;
 
+var questions = [questionOne, questionTwo, questionThree, questionFour, questionFive];
 
 var secondsLeft = 75;
 function startGame() {
   setTimer();
   handleStartClick();
-  /*displayQuestion();*/
+  displayNextQuestion();
 }
 
 function setTimer() {
   // Sets interval in variable
   var timerInterval = setInterval(function() {
-    secondsLeft--; //if statement to make the var - 10 when answer is wrong
+    secondsLeft--; 
     countdown.textContent = secondsLeft + " seconds remaining";
     
     if(secondsLeft <= 0) {
@@ -38,28 +43,44 @@ function handleStartClick(event) {
   }
 }
 
-var btnIdx = 1;
+var btnIdx = 0;
 var ansBtn = document.querySelectorAll(".ans-btn");
 for ( var btnIdx = 0; btnIdx < ansBtn.length; btnIdx++) {
     ansBtn[btnIdx].addEventListener("click", function(event){
       if(event.target.matches("#right-ans")) {
         ansStatus.style.display = "block";
         ansStatus.textContent = ("Correct!");
+        displayNextQuestion();
       } else {
         ansStatus.style.display = "block";
-        ansStatus.textContent = ("wrong!")
+        ansStatus.textContent = ("wrong!");
+        secondsLeft = secondsLeft-10;
+        displayNextQuestion();
       }
    });
 }
 
-
-function displayQuestion() {
+//WILL run when user has selected their answer button
+  //displays next question Div and hides previous
   
-
+function displayNextQuestion() {
+  var index = questions;
+  if (i === 0) {
+        showElement(index[i]);
   }
+  if (0 < i && i < index.length) {
+        hideElement(index[i-1]);
+        showElement(index[i]);
+  }
+  i++;
+}
 
-  /*function hideContent() {
-  }*/
+function showElement(num) {
+  num.style.display = "block";
+}
+function hideElement(num) {
+  num.style.display = "none";
+}
 
   startBtn.addEventListener("click", startGame);
   
