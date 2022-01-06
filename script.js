@@ -4,6 +4,7 @@ var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("startBtn");
 var questionsSec = document.getElementById("questions");
 var pageOne = document.getElementById("page-one");
+var ansStatus = document.getElementById("right-wrong");
 /*var ansBtn = document.querySelectorAll(".ans-btn");*/
 
 
@@ -37,11 +38,17 @@ function handleStartClick(event) {
   }
 }
 
-var counter = 1;
+var btnIdx = 1;
 var ansBtn = document.querySelectorAll(".ans-btn");
-for ( var counter = 0; counter < ansBtn.length; counter++) {
-    ansBtn[counter].addEventListener("click", function(){
-      alert("thats a answer");
+for ( var btnIdx = 0; btnIdx < ansBtn.length; btnIdx++) {
+    ansBtn[btnIdx].addEventListener("click", function(event){
+      if(event.target.matches("#right-ans")) {
+        ansStatus.style.display = "block";
+        ansStatus.textContent = ("Correct!");
+      } else {
+        ansStatus.style.display = "block";
+        ansStatus.textContent = ("wrong!")
+      }
    });
 }
 
